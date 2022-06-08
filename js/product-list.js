@@ -40,12 +40,12 @@ function showBook(books) {
 
 
     if (books.printed == 1) {
-        bookClone.querySelector(".book-icon").src = 'http://mnowak.dk/forlagetmindspace/assets/icons/book-active.svg';
-        bookClone.querySelector(".ebook-icon").src = 'http://mnowak.dk/forlagetmindspace/assets/icons/ebook.svg';
+        bookClone.querySelector(".book-icon").src = 'assets/icons/book-active.svg';
+        bookClone.querySelector(".ebook-icon").src = 'assets/icons/ebook.svg';
         bookClone.querySelector(".product-price").textContent = "DKK " + books.price;
     } else {
-        bookClone.querySelector(".ebook-icon").src = 'http://mnowak.dk/forlagetmindspace/assets/icons/ebook-active.svg';
-        bookClone.querySelector(".book-icon").src = 'http://mnowak.dk/forlagetmindspace/assets/icons/book.svg';
+        bookClone.querySelector(".ebook-icon").src = 'assets/icons/ebook-active.svg';
+        bookClone.querySelector(".book-icon").src = 'assets/icons/book.svg';
         bookClone.querySelector(".product-price").textContent = "DKK " + books.ebook_price;
     }
 
