@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Merriweather:wght@300&display=swap" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <title>Books</title>
+</head>
+
+<body>
+
+    <header>
+            <nav>
+                <div class="uppernav">
+                    <a href="index.html"><img class="logo" src="assets/nav-assets/mindspace_logo1.svg" alt="logo"></a>
+                    <div class="search-bar">
+                        <div class="search-logo">
+                            <img src="assets/nav-assets/search.svg" alt="logo-search">
+                        </div>
+                        <input type="text" placeholder=" Type title, name of the author or ISBN">
+                        <button>SEARCH</button>
+                    </div>
+                    <div class="buttons-nav">
+                        <img src="assets/nav-assets/User_fill.svg" alt="account">
+                        <img src="assets/nav-assets/Favorite_fill.svg" alt="wishlist">
+                        <img src="assets/nav-assets/Bag_alt_fill.svg" alt="bag">
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <div class="dropdown-books">
+                        <a href="#" class="dropbtn">BOOKS <i class="arrow down"></i> </a>
+                            <div class="dropdown-content">
+                              <a href="#"><b>Newly Published</b></a>
+                              <a href="#"><b>All</b></a>
+                              <a href="#">Philosophy</a>
+                              <a href="#">Phychology</a>
+                              <a href="#">Pedagogy</a>
+                              <a href="#">Meditation & Mindfulness</a>
+                              <a href="#">Management & Organizations</a>
+                              <a href="#">Language</a>
+                              <a href="#">Imprint</a>
+                              <a href="#">The School of Life</a>
+                            </div>
+                    </div>
+                    <div class="hamburgerlinks">
+                        <div class="white">
+                            <a href="#">AUTHORS</a>
+                            <a href="#">E-JOURNAL</a>
+                            <a href="#">EVENTS</a>
+                            <a href="#">NEWSLETTER</a>
+                            <a href="#">ABOUT</a>
+                        </div>
+                    </div>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </nav>
+    </header>
+
+    <main id="product-list">
+
+        <h1>All books</h1>
+
+        <div id="products-grid">
+
+            <form id="sorting-form" method="get">
+                <!-- <button id="sort-button">
+                    <img class="icon-sort" src="assets/icons/sorting.svg" alt="sorting icon">
+                    <span>Sort by</span>
+                    <img class="icon-arrow" src="assets/icons/arrow.svg" alt="arrow icon">
+                </button> -->
+                <select name="sort" id="sort" class="sort">
+                    <option value="sort by">Sort by</option>
+                    <option value="recommended">recommended</option>
+                    <option value="top rated">top rated</option>
+                    <option value="price low to high">price low to high</option>
+                    <option value="price high to low">price high to low</option>
+                    <option value="newest first">newest first</option>
+                    <option value="oldest first">oldest first</option>
+                </select>
+            </form>
+
+            <form id="filters-form" method="get">
+
+                <div class="filters-dropdown">
+                    <div class="dropdown-tag">
+                        <img class="icon" src="assets/icons/filters.svg" alt="filters icon">
+                        <h2>Filters</h2>
+                    </div>
+
+                    <div class="filters">
+
+                        <h3>Genres</h3>
+
+                        <div class="input">
+                            <input class="checkbox" id="philosophy" type="checkbox" aria-labelledby="philosophy">
+                            <label for="philosophy">Philosophy</label>
+                        </div>
+
+                        <div class="input">
+                            <input class="checkbox" id="psychology" type="checkbox" aria-labelledby="psychology">
+                            <label for="psychology">Psychology</label>
+                        </div>
+
+                        <div class="input">
+                            <input class="checkbox" id="pedagogy" type="checkbox" aria-labelledby="pedagogy">
+                            <label for="pedagogy">Pedagogy</label>
+                        </div>
+
+                        <div class="input">
+                            <input class="checkbox" id="meditation-mindfulness" type="checkbox" aria-labelledby="meditation-mindfulness">
+                            <label for="meditation-mindfulness">Meditation & mindfulness</label>
+                        </div>
+
+                        <div class="input">
+                            <input class="checkbox" id="management-organization" type="checkbox" aria-labelledby="management-organization">
+                            <label for="management-organization">Management & organization</label>
+                        </div>
+
+                        <div class="input">
+                            <input class="checkbox" id="language" type="checkbox" aria-labelledby="language">
+                            <label for="language">Language</label>
+                        </div>
+
+                        <div class="input">
+                            <input class="checkbox" id="imprint" type="checkbox" aria-labelledby="imprint">
+                            <label for="imprint">Imprint</label>
+                        </div>
+
+                        <div class="input">
+                            <input class="checkbox" id="school-of-life" type="checkbox" aria-labelledby="school-of-life">
+                            <label for="school-of-life">The school of life</label>
+                        </div>
+
+                        <div class="input">
+                            <input class="checkbox" id="think" type="checkbox" aria-labelledby="think">
+                            <label for="think">Think for yourself</label>
+                        </div>                
+
+                        <h3>Author</h3>
+
+                        <div class="author-search">
+                            <img class="icon" src="assets/icons/search-authors.svg" alt="search icon">
+                            <input class="author-searchbar" type="text" placeholder="Type name of the author">
+                        </div>
+
+                        <div class="authors-scroll">
+                            <select id="authors" name="authors" size="7">
+                                <template id="author-name">
+                                    <option value="authors name">author's name</option>
+                                </template>
+                            </select>
+                        </div>
+
+                        <h3>Type</h3>
+
+                        <div class="input">
+                            <input class="checkbox" id="printed-book" type="checkbox" aria-labelledby="printed-book">
+                            <label for="printed-book">printed book</label>
+                        </div>
+
+                        <div class="input">
+                            <input class="checkbox" id="ebook" type="checkbox" aria-labelledby="ebook">
+                            <label for="ebook">ebook</label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+            <div class="all-products">
+
+                <template id="book-card-template">
+                    <div class="book-card">
+                        <a class="product-link" href="" aria-label="go to product page"><img class="book-image" src="" alt=""></a>
+                        <div class="below-image">
+                            <span class="book-genre"></span>
+                            <img class="favourites" src="assets/icons/add-favourites.svg" alt="add to favourites icon">
+                            <img class="buy" src="assets/icons/bag.svg" alt="bag icon">
+                        </div>
+                        <a class="product-link" href="" aria-label="go to product page"><h3 class="title"></h3></a>
+                        <h4 class="author"></h4>
+                        <div class="price-card">
+                            <div class="book-ebook">
+                                <img class="book-icon" src="" alt="book icon">
+                                <img class="ebook-icon" src="" alt="ebook icon">
+                            </div>
+                            <p class="product-price"></p>
+                        </div>
+                    </div>
+                </template>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <img class="logo-footer" src="assets/nav-assets/mindspace_logo1.svg" alt="logo">
+        <div id="footercontainer">
+            <div class="footerinfoandadress">
+                <p>Ryesgade 77, th.</p>
+                <p>2100 København Ø,</p>
+                <p>Denmark </p>
+            </div>
+            <div class="footerinfoandadress">
+                <p>+45 26 16 84 81</p>
+                <p>@forlagetmindspace.dk</p>
+            </div>
+            <p class="links">Links</p>
+            <ul class="ul1"><li><a href="product-list.html">Books</a></li>
+                <li><a href="">E-books</a></li>
+                <li><a href="">Authors</a></li>
+            </ul>
+            <ul class="ul2">
+
+                <li><a href="">Shipping and returns</a></li>
+                <li><a href="">Payment and delivery</a></li>
+                <li><a href="">Help</a></li>
+            </ul>
+        </div>
+        <div id="footerend">
+            <p>Copyright © 2022 </p>
+            <img class="instagramlogo" src="assets/icons/instagramlogo.png" alt="instagramlogo">
+            <img class="fblogo" src="assets/icons/fblogo.png" alt="fblogo">
+        </div>
+    </footer>
+
+    <script src="js/product-list.js"></script>
+    <script src="js/hamburger.js"></script>
+    
+</body>
+</html>

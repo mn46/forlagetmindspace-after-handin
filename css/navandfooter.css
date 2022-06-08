@@ -1,0 +1,76 @@
+:root {
+    --headings-font: 'Merriweather', serif;
+    --body-font: 'Merriweather Sans', serif;
+    --blue-color: #E5F1F3 ;
+    --blue-colorstroke: #A5C3CB;
+}
+
+* {
+    margin: 0;
+}
+/* navigation bar  */
+
+.uppernav {
+    background-color: var(--blue-color);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--blue-colorstroke);
+}
+
+.logo {
+    width: 140px;
+}
+
+.buttons img {
+    height: 30px;
+    margin-left: 12px;
+}
+
+.search-bar, .buttons {
+    display: inline-flex;
+}
+
+.search-logo {
+    background-color: white;
+    border: 1px solid var(--blue-colorstroke);
+    border-right: transparent;
+    width: 20px;
+    padding-right: 6px;
+}
+
+.search-logo img {
+    margin: 3px 5px 0px;
+    width: 20px;
+}
+
+.search-bar input {
+    padding: 2px;
+    width: 300px;
+    border: 1px solid var(--blue-colorstroke);
+    border-left: transparent;
+    outline: none;
+}
+
+.search-bar button {
+    border: 1px solid var(--blue-colorstroke);
+    color: #07262F;
+    font-weight: 500;
+    background-color: #C7E1E8;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+.dropbtn:hover .dropdown-content {
+    display: block;
+}
+
+/* .dropdown-content a:hover {
+    background-color: #ddd;
+} */
+
+.nav-links {
+    display: flex;
+}

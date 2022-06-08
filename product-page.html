@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+    </style>
+    <title>Product page</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="uppernav">
+                <a href="index.html"><img class="logo" src="assets/nav-assets/mindspace_logo1.svg" alt="logo"></a>
+                <div class="search-bar">
+                    <div class="search-logo">
+                        <img src="assets/nav-assets/search.svg" alt="logo-search">
+                    </div>
+                    <input type="text" placeholder=" Type title, name of the author or ISBN">
+                    <button>SEARCH</button>
+                </div>
+                <div class="buttons-nav">
+                    <img src="assets/nav-assets/User_fill.svg" alt="account">
+                    <img src="assets/nav-assets/Favorite_fill.svg" alt="wishlist">
+                    <img src="assets/nav-assets/Bag_alt_fill.svg" alt="bag">
+                </div>
+            </div>
+            <div class="nav-links">
+                <div class="dropdown-books">
+                    <a href="#" class="dropbtn">BOOKS <i class="arrow down"></i> </a>
+                        <div class="dropdown-content">
+                          <a href="#"><b>Newly Published</b></a>
+                          <a href="product-list.html"><b>All</b></a>
+                          <a href="#">Philosophy</a>
+                          <a href="#">Phychology</a>
+                          <a href="#">Pedagogy</a>
+                          <a href="#">Meditation & Mindfulness</a>
+                          <a href="#">Management & Organizations</a>
+                          <a href="#">Language</a>
+                          <a href="#">Imprint</a>
+                          <a href="#">The School of Life</a>
+                        </div>
+                </div>
+                <div class="hamburgerlinks">
+                    <div class="white">
+                        <a href="#">AUTHORS</a>
+                        <a href="#">E-JOURNAL</a>
+                        <a href="#">EVENTS</a>
+                        <a href="#">NEWSLETTER</a>
+                        <a href="#">ABOUT</a>
+                    </div>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="breadcrumbs">
+            <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+            </svg>  <i class="arrow right"></i></a>
+            <a href="#">Books <i class="arrow right"></i></a>
+            <a href="#">Philosophy <i class="arrow right"></i></a>
+            <a href="#">Moving Worlds</a>
+        </div>
+
+        <template id="product-template">
+        <section class="product">
+            <img class="book-image" src="assets/aerboedighed_fordomme.webp" alt="book">
+            <button class="like-mobile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                    <path d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                </svg>
+            </button>
+            <div class="product-info">
+                <p class="genre">PHILOSOPHY</p>
+                <h1 class="name-of-book">Moving worlds</h1>
+                <h2 class="author-of-book">John Shooter</h2>
+                <div class="ratings">
+                    <img src="assets/icons/filled-star.svg" alt="filled-star">
+                    <img src="assets/icons/filled-star.svg" alt="filled-star">
+                    <img src="assets/icons/filled-star.svg" alt="filled-star">
+                    <img src="assets/icons/filled-star.svg" alt="filled-star">
+                    <img src="assets/icons/empty-star.svg" alt="empty-star">
+                    <p>(102)</p>
+                </div>
+                <p class="price-for-book"></p>
+                <div class="buttons-product">
+                    <div class="btns-product">
+                        <button class="like">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                <path d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <button class="buyorlike"></button> -->
+            <div class="about">
+                <div class="about-text">
+                    <h3>About</h3>
+                    <p class="book-about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis ante a erat vehicula, et ornare magna gravida. Donec imperdiet orci metus, sit amet rutrum orci consectetur non. Mauris dolor magna, varius et consequat ut, malesuada et magna. Donec a lobortis nunc, at lacinia velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                    <a href="#">READ MORE</a> 
+                </div>
+                <div class="book-info">
+                    <div class="buttons">
+                        <div class="versions-of-book">
+                            <button class="ebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-tablet-fill" viewBox="0 0 16 16">
+                                <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm7 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0z"/>
+                                </svg>
+                                E-book
+                            </button>
+                            <button class="hardback">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-book-fill" viewBox="0 0 16 16">
+                                <path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                                </svg>
+                                Hardback
+                            </button>
+                        </div>
+                        <div class="product-details">
+                            <div class="toggle-dropdown">
+                                <div class="inner-dropdown">
+                                    <input type="checkbox" id="touch" />
+                                    <label class="pd" for="touch">
+                                        Product details<i class="arrow down"></i>
+                                    </label>
+                                    <ul class="info">
+                                        <li class="isbn-printed"><b>ISBN (printed):</b> 978-87-93535-72-5</li>
+                                        <li class="isbn-ebook"><b>ISBN (e-book):</b> 978-87-93535-73-2</li>
+                                        <li class="pages"><b>Pages:</b> 432</li>
+                                        <li class="publishing-date"><b>Published:</b> 20 December 2021</li>
+                                        <li class="translation"><b>Translation:</b> Ole Lindegård Henriksen</li>                            
+                                    </ul> 
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+            </section>
+            <h4 class="lr">Latest reviews</h4>
+            <section class="latest-reviews">
+                <div class="review-cards">
+                    <div class="review">
+                        <img class="reviewer" src="assets/icons/review.svg" alt="review">
+                        <p class="person1">Jacob Jones</p>
+                        <div class="stars">
+                            <img src="assets/icons/filled-star.svg" alt="filled-star">
+                            <img src="assets/icons/filled-star.svg" alt="filled-star">
+                            <img src="assets/icons/filled-star.svg" alt="filled-star">
+                            <img src="assets/icons/filled-star.svg" alt="filled-star">
+                            <img src="assets/icons/empty-star.svg" alt="empty-star">
+                    </div>
+                    <p class="reviewtext1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vivamus ut platea nec proin phasellus. A sociis donec eget ultrices dui, adipiscing. Phasellus ut tincidunt amet felis arcu, consequat...</p>
+                    </div>
+                <div class="review">
+                    <img class="reviewer" src="assets/icons/review1.svg" alt="review1">
+                <p class="person2">Wade Warren</p>
+                <div class="stars">
+                    <img src="assets/icons/filled-star.svg" alt="filled-star">
+                    <img src="assets/icons/filled-star.svg" alt="filled-star">
+                    <img src="assets/icons/filled-star.svg" alt="filled-star">
+                    <img src="assets/icons/filled-star.svg" alt="filled-star">
+                    <img src="assets/icons/empty-star.svg" alt="empty-star">
+                </div>
+                <p class="reviewtext2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vivamus ut platea nec proin phasellus. A sociis donec eget ultrices dui, adipiscing. Phasellus ut tincidunt amet felis arcu, consequat...</p>
+            </div>
+            </div>
+        </section>
+        <section class="about-the-book">
+            <h5>About the book</h5>
+            <div class="about-the-book-card">
+                <div class="information-about">
+                    <img class="about-book-pic" src="assets/aerboedighed_fordomme.webp" alt="book">
+                    <div class="if">
+                        <p class="genre-about-card">PHILOSOPHY</p>
+                        <p class="name-about-card">Moving worlds</p>
+                        <p class="author-about-card">John Shotter</p>
+                    </div>
+                </div>
+                <p class="text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vivamus ut platea nec proin phasellus. A sociis donec eget ultrices dui, adipiscing. Phasellus ut tincidunt amet felis arcu, consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vivamus ut platea nec proin phasellus. A sociis donec eget ultrices dui, adipiscing. Phasellus ut tincidunt amet felis arcu, consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vivamus ut platea nec proin phasellus. A sociis donec eget ultrices dui, adipiscing. Phasellus ut tincidunt amet felis arcu, consequat...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vivamus ut platea nec proin phasellus. A sociis donec eget ultrices dui, adipiscing. Phasellus ut tincidunt amet felis arcu, consequat.</p>
+            </div>
+        </section>
+        <h6>Meet the author</h6>
+        <section class="meettheauthor">
+                <img class="image-for-author" src="assets/placeholders/author.svg" alt="author">
+                <div class="p">
+            <div class="author-content">
+                 <p class="meettheauthor-name">John Shotter</p>
+                <p class="date-of-birth">(1974, USA)</p>
+            <div class="stars-author">
+                <img src="/assets/icons/filled-blue-star.svg" alt="filled-star">
+                <img src="/assets/icons/filled-blue-star.svg" alt="filled-star">
+                <img src="/assets/icons/filled-blue-star.svg" alt="filled-star">
+                <img src="/assets/icons/filled-blue-star.svg" alt="filled-star">
+                <img src="/assets/icons/empty-blue-star.svg" alt="empty-star">
+            </div>
+            <div class="work">
+                <a class="author-genre" href="#">PHILOSOPHY</a>
+                <p>(2)</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                </svg>
+            </div>
+            </div>
+            <div class="abouttheauthor-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vivamus ut platea nec proin phasellus. A sociis donec eget ultrices dui, adipiscing. Phasellus ut tincidunt amet felis arcu, consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vivamus ut platea nec proin phasellus. A sociis donec eget ultrices dui, adipiscing. Phasellus ut tincidunt amet felis arcu, consequat...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vivamus ut platea nec proin phasellus. A sociis donec eget ultrices dui, adipiscing. Phasellus ut tincidunt amet felis arcu, consequat.</p>
+                <a href="#">READ MORE</a>
+            </div>
+            </div>
+        </section>
+        <p class="mba">More by the author</p>
+        <section class="HPnew-pp">
+            <div class="HPscroll">
+                <template id="book-card-template">
+                    <div class="HPcard">
+                        <a class="product-link" href="" aria-label="go to product page"><img class="book-image"
+                                src="" alt=""></a>
+                        <div class="below-image">
+                            <span class="book-genre"></span>
+                            <img class="favourites" src="assets/icons/add-favourites.svg"
+                                alt="add to favourites icon">
+                            <img class="buy" src="assets/icons/bag.svg" alt="bag icon">
+                        </div>
+                        <a class="product-link" href="" aria-label="go to product page">
+                            <h3 class="title"></h3>
+                        </a>
+                        <h4 class="author"></h4>
+                        <div class="HPprice-card">
+                            <div class="book-ebook">
+                                <img class="book-icon" src="assets/icons/book.svg" alt="book icon">
+                                <img class="ebook-icon" src="assets/icons/ebook.svg" alt="">
+                            </div>
+                            <p class="price"></p>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </section>
+
+        </template>
+    </main>
+    
+    <footer>
+        <img class="logo-footer" src="assets/nav-assets/mindspace_logo1.svg" alt="logo">
+        <div id="footercontainer">
+            <div class="footerinfoandadress">
+                <p>Ryesgade 77, th.</p>
+                <p>2100 København Ø,</p>
+                <p>Denmark </p>
+            </div>
+            <div class="footerinfoandadress">
+                <p>+45 26 16 84 81</p>
+                <p>@forlagetmindspace.dk</p>
+            </div>
+            <p class="links">Links</p>
+            <ul class="ul1"><li><a href="product-list.html">Books</a></li>
+                <li><a href="">E-books</a></li>
+                <li><a href="">Authors</a></li>
+            </ul>
+            <ul class="ul2">
+
+                <li><a href="">Shipping and returns</a></li>
+                <li><a href="">Payment and delivery</a></li>
+                <li><a href="">Help</a></li>
+            </ul>
+        </div>
+        <div id="footerend">
+            <p>Copyright © 2022 </p>
+            <img class="instagramlogo" src="assets/icons/instagramlogo.png" alt="instagramlogo">
+            <img class="fblogo" src="assets/icons/fblogo.png" alt="fblogo">
+        </div>
+    </footer>
+    <script src="js/counter.js"></script>
+    <script src="js/hamburger.js"></script>
+    <script src="js/single-product.js"></script>
+    <script src="js/homepage.js"></script>
+</body>
+</html>
