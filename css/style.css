@@ -214,6 +214,10 @@ a, a:visited, a:active {
    outline: none;
 }
 
+.search-bar button:hover {
+    color: white;
+}
+
 /* home page */
 .HPtopbooktxt h1 {
     font-family: var(--body-font);
