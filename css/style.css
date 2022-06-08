@@ -644,6 +644,7 @@ img.HPauthorImg {
 
 #product-list h1 {
     text-align: center;
+    font-family: var(--headings-font);
 }
 
 #products-grid {
