@@ -670,7 +670,7 @@ img.HPauthorImg {
 
 /* sorting */
 
-#sorting-form {
+#product-sorting {
     width: 8vw;
     column-span: all;
     justify-self: end;
@@ -727,7 +727,7 @@ img.HPauthorImg {
 
 /* filters */
 
-#filters-form {
+#product-filters {
     grid-column: 1/ span 1;
     grid-row: 1/ span 3;
     display: flex;
