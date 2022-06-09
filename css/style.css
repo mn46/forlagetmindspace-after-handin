@@ -290,12 +290,25 @@ a, a:visited, a:active {
     height: 100%;
     background-color: var(--pale-blue);
 }
-.HPeventimg {
-background-image: url("../assets/event-BW.webp");
+
+.HPeventimg, .HPeventimg1, .HPeventimg2  {
 background-repeat: no-repeat;
 background-position-y: center;
 background-size: cover;
 }
+
+.HPeventimg {
+    background-image: url("https://vaskommd.com/events-mindspace/bookfair.webp");
+}
+
+.HPeventimg1 {
+        background-image: url("https://vaskommd.com/events-mindspace/read-aloud-day.webp");
+}
+
+.HPeventimg2 {
+    background-image: url("https://vaskommd.com/events-mindspace/meet-the-author.webp");
+}
+
 .HPscroll::-webkit-scrollbar, .HPeventsgrid::-webkit-scrollbar {
     height: 0.3vw;
 }
