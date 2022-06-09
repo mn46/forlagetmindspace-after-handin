@@ -36,6 +36,7 @@ function showBook(books) {
     productLink[0].href = 'product-page.html?id=' + books.id;
     productLink[1].href = 'product-page.html?id=' + books.id;
 
+    bookClone.querySelector(".book-genre").href = 'product-list.html?categories=' + books.categories;    
     bookClone.querySelector(".author").textContent = books.book_author;
 
 

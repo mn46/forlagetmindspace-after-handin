@@ -877,6 +877,7 @@ option:checked {
     text-transform: uppercase;
     font-family: var(--body-font);
     border-right: 1px solid var(--blue-colorstroke);
+    cursor: pointer;
 }
 
 .favourites, .buy, .book-icon, .ebook-icon {
