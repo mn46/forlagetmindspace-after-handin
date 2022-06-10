@@ -29,7 +29,7 @@ function showProduct(product) {
     productClone.querySelector(".name-of-book").textContent = product.title.rendered;
     productClone.querySelector(".author-of-book").textContent = product.book_author + " " + product.book_author2 + " " + product.book_author3;
     productClone.querySelector(".price-for-book").textContent = product.price + ",- DKK";
-    productClone.querySelector("p.book-about-text").textContent = product.book_info;
+    productClone.querySelector("p.book-about-text").textContent = product.book_info_short;
     productClone.querySelector(".isbn-printed").textContent = "ISBN (printed): " + product.isbn;
     productClone.querySelector(".isbn-ebook").textContent = "ISBN (e-book): " + product.ebook_isbn;
     productClone.querySelector("li.pages").textContent = "Pages: " + product.pages;
