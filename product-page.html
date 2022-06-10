@@ -71,7 +71,23 @@
             <a href="#">Philosophy <i class="arrow right"></i></a>
             <a href="#">Moving Worlds</a>
         </div>
-
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <div class="inner-bag-top">
+                    <p class="bag-title">Bag</p>
+                    <a class="close" href="#">&times;</a>
+                </div>
+                <div class="content">
+                    <img src="" alt="">
+                    <p class="genre-bag"></p>
+                    <p class="name-bag"></p>
+                    <p class="author-bag"></p>
+                    <p class="quantity-bag"><span>Quanity:</span> 1</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16"><path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/></svg>
+                    <p class="price-bag"></p>
+                    
+                </div>
+            </div>
         <template id="product-template">
         <section class="product">
             <img class="book-image" src="assets/aerboedighed_fordomme.webp" alt="book">
@@ -106,7 +122,7 @@
                             <span class="up-counter" onClick="increaseCount(event, this)">+</span>
                           </div>
                         </div>
-                        <button class="add-to-bag">
+                        <button class="add-to-bag" onclick="window.location.href='#popup1';">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
                             <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
                             </svg> ADD TO BAG

@@ -204,6 +204,55 @@ a, a:visited, a:active {
     font-weight: 500;
 }
 
+
+/* bag pop up */
+
+.overlay {
+  transition: opacity 500ms;
+  display: none;
+  opacity: 0;
+}
+
+.overlay:target {
+  display: inline;;
+  opacity: 1;
+}
+
+.popup {
+  border: 1px solid var(--blue-colorstroke);
+  padding: 20px;
+  background: #fff;
+  width: 70%;
+  z-index: 1;
+  position: relative;
+}
+
+.popup .close {
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .content {
+  max-height: 100%;
+  overflow: auto;
+  z-index: 1;
+}
+
+.inner-bag-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid black;
+}
+
+.bag-title {
+  font-size: var(--heading1-size);
+  font-family: var(--headings-font);
+}
 /* button animation */
 
 
