@@ -742,6 +742,7 @@ img.HPauthorImg {
 .dropdown-tag {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .dropdown-tag h2 {
@@ -792,6 +793,11 @@ label {
     align-items: center;
     border: 2px solid var(--blue-colorstroke);
     border-radius: 5px;
+}
+
+.author-search .icon {
+    height: 100%;
+    width: auto;
 }
 
 .author-searchbar {
@@ -1911,7 +1917,7 @@ footer ul li {
         width: 100%;
     }
 
-.nav-links {
+    .nav-links {
         height: 20px;
     }
 
@@ -1932,6 +1938,235 @@ footer ul li {
         justify-content: center;
         max-width: 100%;
     }
+
+    /* product list */
+
+    #products-grid {
+        margin-top: 15%;
+        grid-template-columns: 45% 45%;
+        justify-content: space-between;
+        grid-gap: 2%;
+        grid-template-rows: 8vw 1fr;
+    }
+
+    /* sorting */
+
+    #product-sorting {
+        grid-area: 1 / 2 / span 1 / span 1;
+        width: 100%;
+        height: 100%;
+    }
+
+    #sort-button {
+        font-family: var(--headings-font);
+        width: 100%;
+        height: 100%;
+    }
+
+    .sort {
+      padding-left: 5%;
+      font-family: var(--headings-font);
+      font-size: var(--heading2-size);
+      font-weight: 600;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+        /* -webkit-appearance: none; */
+    }
+
+    .sort:active {
+        font-size: 3vw;
+        width: 100%;
+        height: 100%;
+        /* -webkit-appearance: none; */
+    }
+
+    .sort:hover {
+        width: 100%;
+        height: 100%;
+        /* -webkit-appearance: none; */
+    }
+
+    /* filters */
+
+    #product-filters {
+      grid-area: 1 / 1 / span 1 / span 1;
+      z-index: 1;
+    }
+
+    .filters-dropdown {
+      padding: 1vw;
+      border: 2px solid var(--blue-colorstroke);
+    }
+
+    .dropdown-tag {
+      width: 100%;
+      height: 5.3vw;
+    }
+
+    .dropdown-tag h2 {
+      margin-left: 3%;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+
+    .dropdown-tag .icon {
+      margin-left: 5%;
+      width: 3.5vw;
+      height: auto;
+    }
+
+    .filters {
+        display: none;
+    }
+
+    .filters h3 {
+        margin: 13% 0 3% 5%;
+        font-size: 4vw;
+    }
+
+    .input:last-of-type {
+        margin-bottom: 8%;
+    }
+
+    .input, .author-search, .authors-scroll {
+      margin-left: 5%;
+    }
+
+    .input label {
+        font-size: 2.8vw;
+    }
+
+    .checkbox {
+      width: 4vw;
+    }
+
+    .author-search {
+      margin-right: 5%;
+      height: 5vw;
+    }
+
+    .author-search .icon {
+      margin-right: 5%;
+      width: 5vw;
+    }
+
+    #authors::-webkit-scrollbar {
+      width: 3vw;
+      /* height: 8vw; */
+    }
+
+    #authors option {
+        font-size: 1.3rem;
+    }
+   
+    #authors::-webkit-scrollbar-track {
+      width: 1.5vw;
+    }
+
+
+
+    /* product displayed on product list */
+
+    #products-section {
+        grid-area: 2 / 1 / span 1 / span 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .book-card {
+        width: 35vw;
+        height: auto;
+        margin-bottom: 14%;
+    }
+
+    .below-image {
+      position: relative;
+      height: 4vw;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .book-genre {
+      padding-right: 0%;
+      font-size: 2.3vw;
+      text-align: center;
+      border-right: none;
+    }
+  
+    .favourites, .buy {
+      width: 6vw;
+      background-color: #fff;
+      height: auto;
+      /* cursor: pointer; */
+    }
+
+    .buy {
+      padding: 2%;
+      border: 2px solid var(--blue-colorstroke);
+      position: absolute;
+      top: -40.6vw;
+      left: 26.9vw;
+    }
+
+    .favourites {
+      padding: 2%;
+      border: 2px solid var(--blue-colorstroke);
+      position: absolute;
+      top: -32.4vw;
+      left: 26.9vw;
+    }
+  
+    h3.title {
+      margin-top: 7%;
+      font-size: 3.5vw;
+    }  
+  
+    .book-card h4.author {
+      font-size: 2.4vw;
+    }
+  
+    .price-card {
+      margin-top: 7%;
+    }
+
+    .book-icon, .ebook-icon {
+      width: 5.5vw;
+      height: auto;
+    }
+  
+    p.product-price {
+      font-size: 3.3vw;
+    }
+
+    /* classes for creating dropdown in JS */
+
+    .show-filters {
+      display: block;
+      background-color: #fff;
+      width: 84vw;
+    }
+
+    .dropdown-active {
+        margin: 0;
+        padding: 0;
+        width: 84vw;
+        z-index: 3;
+        background-color: #fff;
+    }
+
+    .adjust-filters-tag {
+        border-bottom: 2px solid var(--blue-colorstroke);
+        justify-content: center;
+        height: 8vw;
+        width: 100%;
+    }
+
+    /* .adjust-filters-h2 {
+        font-size: 2rem;
+        margin-left: 2%;
+    } */
 }
 
 @media only screen and (max-width: 425px) {
@@ -2414,7 +2649,7 @@ footer ul li {
 
     /* sorting */
 
-    #sorting-form {
+    #product-sorting {
         grid-area: 1 / 2 / span 1 / span 1;
         width: 100%;
         height: 100%;
@@ -2452,7 +2687,7 @@ footer ul li {
 
     /* filters */
 
-    #filters-form {
+    #product-filters {
       grid-area: 1 / 1 / span 1 / span 1;
     }
 
@@ -2643,5 +2878,210 @@ footer ul li {
     }
     .HPbanner .readmorebutton {
         margin-top: 10%;
+    }
+
+    /* product list */
+
+    #products-grid {
+        margin-top: 15%;
+        grid-template-columns: 45% 45%;
+        justify-content: space-between;
+        grid-gap: 2%;
+        grid-template-rows: 8vw 1fr;
+    }
+
+    /* sorting */
+
+    #product-sorting {
+        grid-area: 1 / 2 / span 1 / span 1;
+        width: 100%;
+        height: 100%;
+    }
+
+    #sort-button {
+        font-family: var(--headings-font);
+        width: 100%;
+        height: 100%;
+    }
+
+    .sort {
+      padding-left: 5%;
+      font-family: var(--headings-font);
+      font-size: var(--heading2-size);
+      font-weight: 600;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+        /* -webkit-appearance: none; */
+    }
+
+    .sort:active {
+        font-size: 3vw;
+        width: 100%;
+        height: 100%;
+        /* -webkit-appearance: none; */
+    }
+
+    .sort:hover {
+        width: 100%;
+        height: 100%;
+        /* -webkit-appearance: none; */
+    }
+
+    /* filters */
+
+    #product-filters {
+      grid-area: 1 / 1 / span 1 / span 1;
+    }
+
+    .filters-dropdown {
+      padding: 1vw;
+      border: 2px solid var(--blue-colorstroke);
+    }
+
+    .dropdown-tag {
+      width: 100%;
+      height: 5.3vw;
+    }
+
+    .dropdown-tag h2 {
+      margin-left: 5%;
+      font-size: var(--heading2-size);
+      font-weight: 600;
+    }
+
+    .dropdown-tag .icon {
+      margin-left: 5%;
+      width: 3vw;
+      height: auto;
+    }
+
+    .filters {
+        display: none;
+    }
+
+    .filters h3 {
+        margin: 13% 0 3% 5%;
+        font-size: 4vw;
+    }
+
+    .input, .author-search, .authors-scroll {
+      margin-left: 5%;
+    }
+
+    .checkbox {
+      width: 5vw;
+    }
+
+    .author-search {
+      margin-right: 5%;
+    }
+
+    .author-search .icon {
+      margin-right: 5%;
+      width: 5vw;
+    }
+
+    #authors::-webkit-scrollbar {
+      width: 2vw;
+    }
+   
+    #authors::-webkit-scrollbar-track {
+      width: 2vw;
+    }
+
+
+
+    /* product displayed on product list */
+
+    .all-products {
+        grid-area: 2 / 1 / span 1 / span 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .book-card {
+        width: 35vw;
+        height: auto;
+        margin-bottom: 14%;
+    }
+
+    .below-image {
+      position: relative;
+      height: 4vw;
+      display: flex;
+      justify-content: center;
+      /* padding: 2% 0;
+      margin: 0;
+      /* align-items: center;
+      justify-items: center;
+      border: 1px solid var(--blue-colorstroke); */
+    }
+  
+    .book-genre {
+      padding-right: 0%;
+      font-size: 2.3vw;
+      text-align: center;
+      border-right: none;
+    }
+  
+    .favourites, .buy {
+      width: 6vw;
+      background-color: #fff;
+      height: auto;
+      /* cursor: pointer; */
+    }
+
+    .buy {
+      padding: 2%;
+      border: 2px solid var(--blue-colorstroke);
+      position: absolute;
+      top: -40.6vw;
+      left: 26.9vw;
+    }
+
+    .favourites {
+      padding: 2%;
+      border: 2px solid var(--blue-colorstroke);
+      position: absolute;
+      top: -32.4vw;
+      left: 26.9vw;
+    }
+  
+    h3.title {
+      margin-top: 7%;
+      font-size: 3.5vw;
+    }  
+  
+    .book-card h4.author {
+      font-size: 2.4vw;
+    }
+  
+    .price-card {
+      margin-top: 7%;
+    }
+
+    .book-icon, .ebook-icon {
+      width: 5.5vw;
+      height: auto;
+    }
+  
+    p.product-price {
+      font-size: 3.3vw;
+    }
+
+    /* classes for creating dropdown in JS */
+
+    .show-filters {
+      display: block;
+      background-color: #fff;
+      width: 80vw;
+    }
+
+    .dropdown-active {
+      width: 80vw;
+      z-index: 3;
+      background-color: #fff;
     }
 }
