@@ -114,12 +114,15 @@ a, a:visited, a:active {
 }
 
 .search-bar button {
+  width: 5rem;
   border: 1px solid var(--blue-colorstroke);
   color: #07262f;
   font-weight: 800;
   background-color: #c7e1e8;
   font-family: var(--body-font);
   font-weight: 600;
+  box-shadow: inset 0 0 0 0 var(--secondary-color);
+  transition: ease-out 0.3s;
 }
 
 .dropbtn {
@@ -201,6 +204,20 @@ a, a:visited, a:active {
     font-weight: 500;
 }
 
+/* button animation */
+
+
+.search-bar button:focus {
+   box-shadow: inset 5rem 0 0 0 var(--secondary-color);
+   border: 1px solid var(--secondary-color);
+   color: white;
+   outline: none;
+}
+
+.search-bar button:hover {
+    color: white;
+}
+
 /* home page */
 .HPtopbooktxt h1 {
     font-family: var(--body-font);
@@ -273,12 +290,25 @@ a, a:visited, a:active {
     height: 100%;
     background-color: var(--pale-blue);
 }
-.HPeventimg {
-background-image: url("../assets/event-BW.webp");
+
+.HPeventimg, .HPeventimg1, .HPeventimg2  {
 background-repeat: no-repeat;
 background-position-y: center;
 background-size: cover;
 }
+
+.HPeventimg {
+    background-image: url("https://vaskommd.com/events-mindspace/bookfair.webp");
+}
+
+.HPeventimg1 {
+        background-image: url("https://vaskommd.com/events-mindspace/read-aloud-day.webp");
+}
+
+.HPeventimg2 {
+    background-image: url("https://vaskommd.com/events-mindspace/meet-the-author.webp");
+}
+
 .HPscroll::-webkit-scrollbar, .HPeventsgrid::-webkit-scrollbar {
     height: 0.3vw;
 }
