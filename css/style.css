@@ -1834,7 +1834,7 @@ footer ul li {
     .HPevent {
         grid-template-columns: 50vw;
     }
-    .HPeventimg {
+    .HPeventimg, .HPeventimg1, .HPeventimg2 {
         height: 30vh;
     }
     .HPeventsgrid {
