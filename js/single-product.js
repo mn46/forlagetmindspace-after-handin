@@ -59,17 +59,43 @@ function showProduct(product) {
 
 function displayAuthor(product) {
 
-    console.log(product);
+    // let authors_array = [
+    //     [product.book_author, product.author_picture, product.author_info], 
+    //     [product.book_author2, product.author_picture2, product.author_info2], 
+    //     [product.book_author3, product.author_picture2, product.author_info3]
+    // ];
 
-    const authorTemplate = document.querySelector("#author-template").content;
-    authorClone = authorTemplate.cloneNode(true);
+    // authors_array.forEach(element => {
+    //     if (element[0] !== "") {
 
-    authorClone.querySelector(".image-for-author").src = product.author_picture;
-    authorClone.querySelector(".meettheauthor-name").textContent = product.book_author;
-    authorClone.querySelector(".author-genre").textContent = product.genre;
-    authorClone.querySelector(".abouttheauthor-text p").textContent = product.author_info;
+    //         const authorTemplate = document.querySelector("#author-template").content;
+    //         authorClone = authorTemplate.cloneNode(true);
 
-    document.querySelector("#authors-list").appendChild(authorClone);
+    //         authorClone.querySelector(".image-for-author").src = element[1];
+    //         authorClone.querySelector(".meettheauthor-name").textContent = element[0];
+    //         authorClone.querySelector(".author-genre").textContent = product.genre;
+    //         authorClone.querySelector(".abouttheauthor-text p").textContent = element[2];
+
+    //         document.querySelector("#authors-list").appendChild(authorClone);
+
+    //     }
+    // });
+
+    if (product.book_author !== "") {
+
+        console.log(product);
+
+        const authorTemplate = document.querySelector("#author-template").content;
+        authorClone = authorTemplate.cloneNode(true);
+
+        authorClone.querySelector(".image-for-author").src = product.author_picture;
+        authorClone.querySelector(".meettheauthor-name").textContent = product.book_author;
+        authorClone.querySelector(".author-genre").textContent = product.genre;
+        authorClone.querySelector(".abouttheauthor-text p").textContent = product.author_info;
+
+        document.querySelector("#authors-list").appendChild(authorClone);
+
+    }
 
 }
 

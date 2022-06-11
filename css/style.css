@@ -1454,7 +1454,7 @@ h3 {
 
 .meettheauthor img {
   grid-column: 1/2;
-  width: 90%;
+  width: 88%;
   height: auto;
 }
 
@@ -1503,8 +1503,6 @@ h6, .mba {
 }
 
 .abouttheauthor-text p {
-  /* height: 100%; */
-  /* margin-top: auto; */
   width: 85%;
   font-family: var(--body-font);
   font-size: var(--body-size);
