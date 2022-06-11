@@ -14,8 +14,9 @@ fetch(urlBooks)
     
     .then(function(data) {
         showProduct(data);
-        showAuthor(data);
+        displayAuthor(data);
     })
+
 
 
 function showProduct(product) {
@@ -56,15 +57,23 @@ function showProduct(product) {
 
 }
 
-function showAuthor(product) {
+function displayAuthor(product) {
+
+    console.log(product);
 
     const authorTemplate = document.querySelector("#author-template").content;
     authorClone = authorTemplate.cloneNode(true);
 
     authorClone.querySelector(".image-for-author").src = product.author_picture;
     authorClone.querySelector(".meettheauthor-name").textContent = product.book_author;
+    authorClone.querySelector(".author-genre").textContent = product.genre;
+    authorClone.querySelector(".abouttheauthor-text p").textContent = product.author_info;
 
     document.querySelector("#authors-list").appendChild(authorClone);
 
 }
+
+
+
+
 

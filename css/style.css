@@ -1454,6 +1454,8 @@ h3 {
 
 .meettheauthor img {
   grid-column: 1/2;
+  width: 90%;
+  height: auto;
 }
 
 .work {
@@ -1489,6 +1491,7 @@ h3 {
   font-size: var(--heading2-size);
   color: #737d80;
   font-weight: 200;
+  text-transform: uppercase;
 }
 
 h6, .mba {
@@ -1500,13 +1503,23 @@ h6, .mba {
 }
 
 .abouttheauthor-text p {
-  height: 100%;
-  margin-top: auto;
+  /* height: 100%; */
+  /* margin-top: auto; */
+  width: 85%;
+  font-family: var(--body-font);
+  font-size: var(--body-size);
   font-weight: 200;
-  line-height: 1.5;
+  line-height: 1.8rem;
   margin-top: 2rem;
+  margin-bottom: 1.5rem;
 }
+
+.abouttheauthor-text a {
+    color: black;
+}
+
 /* newsletter */
+
 .newsletter {
     background-color: var(--blue-hover);
     display: grid;
@@ -1565,23 +1578,6 @@ footer p.links {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
-}
-
-.abouttheauthor-text p {
-    line-height: 1.8;
-    letter-spacing: 0.03rem;
-    height: 100%;
-    margin-top: auto;
-    font-weight: 200;
-    line-height: 1.5;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-    
-
-
-.abouttheauthor-text a {
-    color: black;
 }
 
 .logo-footer {
