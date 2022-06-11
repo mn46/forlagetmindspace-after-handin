@@ -245,7 +245,7 @@ a, a:visited, a:active {
 }
 
 .popup .content {
-  max-height: 100%;
+  max-height: 60%;
   overflow: auto;
 
 }
@@ -2042,7 +2042,27 @@ footer ul li {
 }
 
 @media only screen and (max-width: 768px) {
-    
+
+  /* bag pop up */
+    .popup {
+    width: 90%;
+    }
+
+    .content {
+      column-gap: 5%;
+    }
+
+    .bag-title, .name-bag {
+      font-size: var(--heading1-mobile);
+    }
+
+    .genre-bag, .author-bag, .checkout-button {
+      font-size: var(--heading2-mobile);
+    }
+
+    .quantity-bag, .price-bag, .subtotal-bag, .delivery-bag, .total-bag {
+      font-size: var(--body-mobile);
+    }
 
     .hamburger {
         display: block;
@@ -3020,7 +3040,6 @@ footer ul li {
       z-index: 3;
       background-color: #fff;
     }
-
 }
 
 @media only screen and (max-width: 320px) {
