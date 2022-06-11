@@ -385,8 +385,7 @@ a:active {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: rgba(168, 168, 168, 0.7);
-    ;
+    background-color: rgba(168, 168, 168, 0.8);
 }
 .pl-hover:hover .HPoverlay {
   opacity: 1;
@@ -394,7 +393,6 @@ a:active {
 }
 .overlaytxt {
     color: white;
-    font-size: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -403,6 +401,10 @@ a:active {
     transform: translate(-50%, -50%);
     text-align: center;
   }
+  #home-main p.overlaytxt {
+    font-size: 1.3rem;
+    font-family: var(--headings-font);
+}
 /* img hover states end */
 .HPcard .below-image {
   display: flex;
