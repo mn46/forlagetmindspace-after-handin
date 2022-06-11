@@ -38,18 +38,18 @@
             <div class="nav-links">
                 <div class="dropdown-books">
                     <a href="#" class="dropbtn">BOOKS <i class="arrow down"></i> </a>
-                        <div class="dropdown-content">
-                          <a href="#"><b>Newly Published</b></a>
-                          <a href="product-list.html"><b>All</b></a>
-                          <a href="product-list.html">Philosophy</a>
-                          <a href="product-list.html">Phychology</a>
-                          <a href="product-list.html">Pedagogy</a>
-                          <a href="product-list.html">Meditation & Mindfulness</a>
-                          <a href="product-list.html">Management & Organizations</a>
-                          <a href="product-list.html">Language</a>
-                          <a href="product-list.html">Imprint</a>
-                          <a href="product-list.html">The School of Life</a>
-                        </div>
+                    <div class="dropdown-content">
+                        <a href="#"><b>Newly Published</b></a>
+                        <a href="product-list.html"><b>All</b></a>
+                        <a href="product-list.html">Philosophy</a>
+                        <a href="product-list.html">Phychology</a>
+                        <a href="product-list.html">Pedagogy</a>
+                        <a href="product-list.html">Meditation & Mindfulness</a>
+                        <a href="product-list.html">Management & Organizations</a>
+                        <a href="product-list.html">Language</a>
+                        <a href="product-list.html">Imprint</a>
+                        <a href="product-list.html">The School of Life</a>
+                    </div>
                 </div>
                 <div class="hamburgerlinks">
                     <div class="white">
@@ -83,8 +83,12 @@
                 <div class="HPscroll">
                     <template id="book-card-template">
                         <div class="HPcard">
-                            <a class="product-link" href="" aria-label="go to product page"><img class="book-image"
-                                    src="" alt=""></a>
+                            <div class="pl-hover">
+                                <a class="product-link" href="" aria-label="go to product page"><img class="book-image"
+                                        src="" alt=""></a>
+                                <a class="HPoverlay product-link" href=""
+                                    aria-label="go to product page"><p class="overlaytxt">View</p></a>
+                            </div>
                             <div class="below-image">
                                 <span class="book-genre"></span>
                                 <img class="favourites" src="assets/icons/add-favourites.svg"
@@ -157,7 +161,9 @@
                             <div class="HPeventtxt">
                                 <div class="eventTag red">30. 5. 2022</div>
                                 <h2>MindSpace’s annual book fair</h2>
-                                <p>Do you want to meet a dozen of true book-lovers and incredible authors?<br>If yes, then you will love the MindSpace book fair that is organized every year!<br>You can expect to see incredible author panels, book signings, and more.                                     
+                                <p>Do you want to meet a dozen of true book-lovers and incredible authors?<br>If yes,
+                                    then you will love the MindSpace book fair that is organized every year!<br>You can
+                                    expect to see incredible author panels, book signings, and more.
                                 </p>
                                 <button class="readmorebutton">read more</button>
                             </div>
@@ -169,8 +175,9 @@
                             <div class="HPeventtxt">
                                 <div class="eventTag red">30. 5. 2022</div>
                                 <h2>World Read Aloud Day</h2>
-                                <p>Come and join us at MindSpace for the annual world read aloud day. 
-                                    Meet your favorite authors, play games, enjoy read alouds, hear from educational experts and more!                                    
+                                <p>Come and join us at MindSpace for the annual world read aloud day.
+                                    Meet your favorite authors, play games, enjoy read alouds, hear from educational
+                                    experts and more!
                                 </p>
                                 <button class="readmorebutton">read more</button>
                             </div>
@@ -182,8 +189,10 @@
                             <div class="HPeventtxt">
                                 <div class="eventTag red">30. 5. 2022</div>
                                 <h2>The author couple Flor Rotne talks about their book “The bird in hand”</h2>
-                                <p>Do you want to strengthen your inner peace and power of action for the benefit of yourself and others?
-                                    <br>An evening with <b>Nikolaj</b> and <b>Didde Flor Rotne</b> - who have taught mindfulness and been “bridge builders “ for the last 15 years.                                     
+                                <p>Do you want to strengthen your inner peace and power of action for the benefit of
+                                    yourself and others?
+                                    <br>An evening with <b>Nikolaj</b> and <b>Didde Flor Rotne</b> - who have taught
+                                    mindfulness and been “bridge builders “ for the last 15 years.
                                 </p>
                                 <button class="readmorebutton">read more</button>
                             </div>
@@ -306,7 +315,8 @@
                 <p>@forlagetmindspace.dk</p>
             </div>
             <p class="links">Links</p>
-            <ul class="ul1"><li><a href="product-list.html">Books</a></li>
+            <ul class="ul1">
+                <li><a href="product-list.html">Books</a></li>
                 <li><a href="">E-books</a></li>
                 <li><a href="">Authors</a></li>
             </ul>
