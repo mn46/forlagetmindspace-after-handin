@@ -207,24 +207,33 @@ a, a:visited, a:active {
 
 /* bag pop up */
 
+.bag-popup {
+  position: absolute;
+  z-index: 1;
+  
+}
+
 .overlay {
   transition: opacity 500ms;
   display: none;
   opacity: 0;
+  
 }
 
 .overlay:target {
   display: inline;;
   opacity: 1;
+  
 }
 
 .popup {
   border: 1px solid var(--blue-colorstroke);
   padding: 20px;
   background: #fff;
-  width: 70%;
+  width: 60%;
   z-index: 1;
   position: relative;
+  margin-left: auto;
 }
 
 .popup .close {
@@ -238,7 +247,7 @@ a, a:visited, a:active {
 .popup .content {
   max-height: 100%;
   overflow: auto;
-  z-index: 1;
+
 }
 
 .inner-bag-top {
@@ -247,11 +256,102 @@ a, a:visited, a:active {
   justify-content: space-between;
   margin-bottom: 1rem;
   border-bottom: 1px solid black;
+  padding-bottom: 10px;
 }
 
 .bag-title {
   font-size: var(--heading1-size);
   font-family: var(--headings-font);
+}
+
+.content img {
+  width: 100%;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 50% 20% 20%;
+  column-gap: 5%;
+  grid-template-rows: auto;
+  font-family: var(--body-font);
+}
+
+.bag-info-book {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+}
+
+.quantity-bag {
+  margin-top: auto;
+  font-size: var(--body-size);
+  font-weight: 200;
+}
+
+.name-bag {
+  font-size: var(--heading2-size);
+  color: var(--secondary-color);
+}
+
+.genre-bag {
+  font-size: var(--nav-size);
+  color: #737d80;
+  text-decoration: underline;
+}
+
+.content svg {
+  color: var(--secondary-color);
+  margin-left: auto;
+}
+
+.third-column-bag .price-bag {
+  margin-left: auto;
+}
+
+.third-column-bag {
+  grid-column: 3/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.subtotal-bag, .delivery-bag, .total-bag {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delivery-bag p:first-of-type, .subtotal-bag p:first-of-type{
+  font-weight: 200;
+}
+  
+.delivery-bag {
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  margin-bottom: 10%;
+}
+
+.prices-bag {
+  grid-column: 1/4;
+  margin-top: 10%;
+}
+
+.checkout-button {
+  color: var(--secondary-color);
+  text-align: center;
+  border: 1px solid var(--secondary-color);
+  background-color: white;
+  font-family: var(--body-font);
+  font-size: var(--body-size);
+  
+}
+
+.center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
 }
 /* button animation */
 

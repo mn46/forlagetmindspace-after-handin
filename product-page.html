@@ -63,6 +63,7 @@
         </nav>
     </header>
     <main>
+        
         <div class="breadcrumbs">
             <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
             <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
@@ -71,23 +72,47 @@
             <a href="#">Philosophy <i class="arrow right"></i></a>
             <a href="#">Moving Worlds</a>
         </div>
-        <div id="popup1" class="overlay">
+        <div class="bag-popup"> 
+            <template class="template-bag"></template>
+            <div id="popup1" class="overlay">
             <div class="popup">
                 <div class="inner-bag-top">
                     <p class="bag-title">Bag</p>
                     <a class="close" href="#">&times;</a>
                 </div>
                 <div class="content">
-                    <img src="" alt="">
-                    <p class="genre-bag"></p>
-                    <p class="name-bag"></p>
-                    <p class="author-bag"></p>
-                    <p class="quantity-bag"><span>Quanity:</span> 1</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16"><path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/></svg>
-                    <p class="price-bag"></p>
-                    
-                </div>
+                    <img src="assets/en-stemme.webp" alt="book-in-bag">
+                    <div class="bag-info-book">
+                        <p class="genre-bag">PHILOSOPHY</p>
+                        <p class="name-bag">Moving Worlds</p>
+                        <p class="author-bag">John Scotter</p>
+                        <p class="quantity-bag"><span>Quanity:</span> 1</p>
+                    </div>
+                    <div class="third-column-bag">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16"><path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/></svg>
+                        <p class="price-bag"><span>DKK</span>298,-</p>
+                    </div>
+                    <div class="prices-bag">
+                        <div class="subtotal-bag">
+                            <p>Subtotal:</p>
+                            <p class="price-bag"><span>DKK</span> 298,-</p>
+                        </div>
+                        <div class="delivery-bag">
+                            <p>Standard delivery:</p>
+                            <p><span>DKK</span> 50,-</p>
+                        </div>
+                        <div class="total-bag">
+                            <p>Total price (incl. VAT):</p>
+                            <p><span>DKK</span> 348,-</p>
+                        </div>
+                        <div class="center-button">
+                            <button class="checkout-button">GO TO CHECKOUT</button>
+                        </div>
+                    </div>
+                </div> 
             </div>
+        </div>
+           
         <template id="product-template">
         <section class="product">
             <img class="book-image" src="assets/aerboedighed_fordomme.webp" alt="book">
