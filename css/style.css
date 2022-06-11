@@ -1433,6 +1433,12 @@ h3 {
 
 /* meet the author */
 
+#authors-list {
+  display: flex;
+  flex-direction: column;
+  /* background-color: var(--pale-secondary); */
+}
+
 .meettheauthor {
   display: grid;
   grid-template-columns: 0.6fr 1fr;
