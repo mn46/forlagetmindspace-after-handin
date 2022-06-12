@@ -14,9 +14,9 @@ fetch(urlBooks)
     
     .then(function(data) {
         showProduct(data);
-        // showReview(data);
-        // showAuthor(data);
+        displayAuthor(data);
     })
+
 
 
 function showProduct(product) {
@@ -48,20 +48,58 @@ function showProduct(product) {
 
     // about the book
 
-    productClone.querySelector(".about-book-pic").src = product.book_picture;
-    productClone.querySelector(".genre-about-card").textContent = product.genre;
-    productClone.querySelector(".name-about-card").textContent = product.title.rendered;
-    productClone.querySelector(".author-about-card").textContent = product.book_author + " " + product.book_author2 + " " + product.book_author3;
-    productClone.querySelector(".price").textContent = product.price + ",- DKK";
-    productClone.querySelector("p.text-about").textContent = product.book_info;
-
-    // authors
+    // productClone.querySelector(".about-book-pic").src = product.book_picture;
+    // productClone.querySelector(".genre-about-card").textContent = product.genre;
+    // productClone.querySelector(".name-about-card").textContent = product.title.rendered;
+    // productClone.querySelector(".author-about-card").textContent = product.book_author + " " + product.book_author2 + " " + product.book_author3;
+    // productClone.querySelector(".price").textContent = product.price + ",- DKK";
+    // productClone.querySelector("p.text-about").textContent = product.book_info;
 
 }
 
-// function showReview(review) {
+function displayAuthor(product) {
 
-    
+    // let authors_array = [
+    //     [product.book_author, product.author_picture, product.author_info], 
+    //     [product.book_author2, product.author_picture2, product.author_info2], 
+    //     [product.book_author3, product.author_picture2, product.author_info3]
+    // ];
 
-// }
+    // authors_array.forEach(element => {
+    //     if (element[0] !== "") {
+
+    //         const authorTemplate = document.querySelector("#author-template").content;
+    //         authorClone = authorTemplate.cloneNode(true);
+
+    //         authorClone.querySelector(".image-for-author").src = element[1];
+    //         authorClone.querySelector(".meettheauthor-name").textContent = element[0];
+    //         authorClone.querySelector(".author-genre").textContent = product.genre;
+    //         authorClone.querySelector(".abouttheauthor-text p").textContent = element[2];
+
+    //         document.querySelector("#authors-list").appendChild(authorClone);
+
+    //     }
+    // });
+
+    if (product.book_author !== "") {
+
+        console.log(product);
+
+        const authorTemplate = document.querySelector("#author-template").content;
+        authorClone = authorTemplate.cloneNode(true);
+
+        authorClone.querySelector(".image-for-author").src = product.author_picture;
+        authorClone.querySelector(".meettheauthor-name").textContent = product.book_author;
+        authorClone.querySelector(".author-genre").textContent = product.genre;
+        authorClone.querySelector(".abouttheauthor-text p").textContent = product.author_info;
+
+        document.querySelector("#authors-list").appendChild(authorClone);
+
+    }
+
+}
+
+
+
+
 
