@@ -271,8 +271,13 @@ a:active {
 #home-main .price {
   margin-top: 0;
   text-align: end;
-  font-weight: 500;
-  margin-bottom: 20px;
+  font-weight: 900;
+  font-family: var(--body-font);
+  font-size: 16px;
+}
+#home-main .book-icon,
+#home-main .ebook-icon {
+  width: 30px;
 }
 .HPeventsgrid {
   display: grid;
@@ -313,7 +318,7 @@ a:active {
 
 .HPscroll::-webkit-scrollbar,
 .HPeventsgrid::-webkit-scrollbar {
-  height: 0.3vw;
+  height: 4px;
 }
 .HPscroll::-webkit-scrollbar-thumb,
 .HPeventsgrid::-webkit-scrollbar-thumb {
@@ -321,7 +326,7 @@ a:active {
 }
 .HPscroll::-webkit-scrollbar-track,
 .HPeventsgrid::-webkit-scrollbar-track {
-  height: 0.3vw;
+  height: 4px;
   background-color: #f0d6cf;
 }
 .HPeventtxt {
@@ -376,46 +381,44 @@ a:active {
   height: auto;
 }
 .HPoverlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: rgba(168, 168, 168, 0.8);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(168, 168, 168, 0.8);
 }
 .pl-hover:hover .HPoverlay {
   opacity: 1;
   cursor: pointer;
 }
 .overlaytxt {
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  #home-main p.overlaytxt {
-    font-size: 1.3rem;
-    font-family: var(--headings-font);
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#home-main p.overlaytxt {
+  font-size: 1.3rem;
+  font-family: var(--headings-font);
 }
 /* img hover states end */
 .HPcard .below-image {
   display: flex;
   justify-content: space-between;
-  border: 1px solid var(--blue-colorstroke);
+  outline: var(--blue-colorstroke) solid 1px;
+  outline-offset: -1px;
+  width: auto;
   padding: 2% 0;
-  width: 100%;
   background-color: white;
-}
-.HPcard .favourites {
-  width: 10%;
 }
 .HPcard .buy {
   padding-right: 1rem;
@@ -432,7 +435,7 @@ a:active {
   margin-top: 5%;
   font-family: var(--body-font);
   font-weight: 900;
-  font-size: 1rem;
+  font-size: 16px;
   color: var(--secondary-color);
   cursor: pointer;
   white-space: nowrap;
@@ -450,13 +453,9 @@ a:active {
   font-weight: 200;
   margin-top: 0.3rem;
 }
-.HPcard .book-ebook img {
-  width: 10%;
-}
 .HPcard .book-ebook {
   display: flex;
-  gap: 10px;
-  margin-top: 0.5rem;
+  gap: 5px;
 }
 .HPcard a {
   text-decoration: none;
@@ -583,13 +582,13 @@ a:active {
   margin: 0 80px;
 }
 .HPauthorsScroll::-webkit-scrollbar {
-  height: 0.3vw;
+  height: 4px;
 }
 .HPauthorsScroll::-webkit-scrollbar-thumb {
   background-color: #a5c3cb;
 }
 .HPauthorsScroll::-webkit-scrollbar-track {
-  height: 0.3vw;
+  height: 4px;
   background-color: #e5f1f3;
 }
 .HPauthor-card {
@@ -706,10 +705,6 @@ img.HPauthorImg {
 .price {
   font-family: var(--body-font);
   text-align: end;
-}
-
-.HPprice-card .price {
-  margin-bottom: 20px;
 }
 
 .stars-author {
@@ -943,6 +938,9 @@ option:checked {
   height: auto;
   cursor: pointer;
 }
+/* .HPcard .favourites, .HPcard .buy {
+  width: auto;
+} */
 
 h3.title {
   margin-top: 5%;
@@ -970,14 +968,17 @@ a:visited {
   cursor: pointer;
 }
 
-.price-card {
+.price-card,
+.HPprice-card {
   margin-top: 5%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
-
+.HPprice-card {
+  margin-bottom: 10%;
+}
 p.product-price {
   font-weight: 900;
   font-family: var(--body-font);
@@ -1536,7 +1537,7 @@ h6,
 }
 
 .abouttheauthor-text a {
-    color: black;
+  color: black;
 }
 
 /* newsletter */
@@ -1660,6 +1661,7 @@ footer ul li {
 .HPcard {
   margin-top: 20px;
   width: 200px;
+  margin-bottom: 8%;
 }
 .HPcard .book-image {
   width: 100%;
@@ -1670,6 +1672,10 @@ footer ul li {
   background-color: var(--pale-blue);
   padding-bottom: 20px;
   margin-bottom: 10%;
+}
+.HPcard .favourites,
+.HPcard .buy {
+  width: auto;
 }
 
 /* media queries  */
@@ -1699,9 +1705,6 @@ footer ul li {
 @media only screen and (min-width: 1440px) {
   .HPh3 {
     font-size: 2.3rem;
-  }
-  .HPevent {
-    grid-template-columns: 30vw 25vw;
   }
   .NLgrid {
     gap: 40px;
@@ -1798,6 +1801,12 @@ footer ul li {
   .NLgrid {
     gap: 40px;
   }
+  .HPeventtxt {
+    margin: 40px;
+  }
+  .HPeventtxt h2 {
+    font-size: 1.6rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -1810,7 +1819,7 @@ footer ul li {
     padding: 60px 20px;
   }
   #home-main .price {
-    font-size: 1rem;
+    font-size: 22px;
   }
   .HPtoprated .ratings img {
     width: 10%;
@@ -1831,7 +1840,6 @@ footer ul li {
   .HPbanner {
     height: 50vh;
   }
-
   .HPbanner h1 {
     font-size: 4vh;
     line-height: 7vh;
@@ -1857,21 +1865,18 @@ footer ul li {
     width: 5%;
     height: auto;
   }
-  .HPevent {
-    grid-template-columns: 50vw;
-  }
-  .HPeventimg {
-    height: 30vh;
-  }
-  .HPeventsgrid {
-    gap: 20px;
-  }
   #home-main h2 {
     font-size: 1.5rem;
     margin-top: 20px;
   }
   .HPeventtxt {
     margin: 40px;
+  }
+  .HPeventsgrid {
+    margin: 0 0 50px 0;
+  }
+  .HPevent {
+    grid-template-columns: 50vw 50vw;
   }
   .eventTag {
     margin-top: -60px;
@@ -1896,11 +1901,10 @@ footer ul li {
     gap: 20px;
     margin: 0 40px;
   }
-  .HPevent {
-    grid-template-columns: 40vw;
-  }
   .HPeventtxt {
     gap: 20px;
+    height: 82%;
+    align-content: space-between;
   }
   #home-main h2 {
     margin-top: 0;
@@ -1915,6 +1919,20 @@ footer ul li {
   .HPbanner {
     background-image: url("../assets/drommemaskine-s.jpg");
     background-size: cover;
+  }
+  .HPcard .buy {
+    padding: 2%;
+    left: auto;
+    top: -40vw;
+    right: 0;
+  }
+  .HPcard .favourites {
+    padding: 2%;
+    border: 2px solid var(--blue-colorstroke);
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: -32vw;
   }
 }
 
@@ -2128,7 +2146,8 @@ footer ul li {
     justify-content: space-between;
   }
 
-  .book-card {
+  .book-card,
+  .HPcard {
     width: 35vw;
     height: auto;
     margin-bottom: 14%;
@@ -2141,13 +2160,26 @@ footer ul li {
     justify-content: center;
   }
 
-  .book-genre {
+  .book-genre,
+  .HPcard .book-genre {
     padding-right: 0%;
     font-size: 2.3vw;
     text-align: center;
     border-right: none;
   }
-
+  .HPcard .book-genre {
+    padding: 0;
+  }
+  .HPcard .below-image {
+    justify-content: center;
+  }
+  .HPcard .title {
+    font-size: 22px;
+  }
+  .HPcard .author {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
   .favourites,
   .buy {
     width: 6vw;
@@ -2170,6 +2202,10 @@ footer ul li {
     position: absolute;
     top: -32.4vw;
     left: 26.9vw;
+  }
+  .HPcard .favourites,
+  .HPcard .buy {
+    width: 6vw;
   }
 
   h3.title {
@@ -2225,6 +2261,10 @@ footer ul li {
 }
 
 @media only screen and (max-width: 425px) {
+  #home-main .readmorebutton {
+    width: 100%;
+    height: 50px;
+  }
   .HPh3 {
     font-size: 1rem;
     line-height: 1.8rem;
@@ -2236,9 +2276,6 @@ footer ul li {
   .HPscroll {
     margin: 0 20px;
     gap: 20px;
-  }
-  .HPcard {
-    width: 150px;
   }
   .HPcategorybutt {
     font-size: 1rem;
@@ -2259,10 +2296,17 @@ footer ul li {
     width: 120px;
   }
   .HPeventsgrid {
-    margin: 0 20px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: -20vw;
+  }
+  #home-main h2 {
+    font-size: 1.2rem;
+  }
+  #home-main p {
+    font-size: 0.8rem;
   }
   .HPevent {
-    grid-template-columns: 80vw;
+    grid-template-columns: 55vw 65vw;
   }
   .HPtopbooktxt .readmorebutton {
     margin-top: 0;
@@ -2699,10 +2743,6 @@ footer ul li {
     object-fit: cover;
   }
 
-  .price {
-    margin-bottom: 10px;
-  }
-
   .information-about {
     width: 80%;
   }
@@ -2895,6 +2935,16 @@ footer ul li {
     width: 5.5vw;
     height: auto;
   }
+  .HPcard .title {
+    font-size: 15px;
+  }
+  .HPcard .author,
+  .HPcard .book-genre {
+    font-size: 12px;
+  }
+  #home-main .price {
+    font-size: 15px;
+  }
 
   p.product-price {
     font-size: 3.3vw;
@@ -2915,6 +2965,21 @@ footer ul li {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .HPcard .title,
+  #home-main .price {
+    font-size: 13px;
+  }
+  .HPcard .author,
+  .HPcard .book-genre {
+    font-size: 11px;
+  }
+  #home-main .book-icon,
+  #home-main .ebook-icon {
+    width: 25px;
+  }
+}
+
 @media only screen and (max-width: 320px) {
   .HPcategorylist a {
     width: 100%;
@@ -2924,9 +2989,6 @@ footer ul li {
     margin: 20px;
     margin-top: 0;
     gap: 5px;
-  }
-  .HPcard {
-    width: 40vw;
   }
   .HPscroll {
     gap: 15px;
@@ -3089,6 +3151,9 @@ footer ul li {
       justify-items: center;
       border: 1px solid var(--blue-colorstroke); */
   }
+  .HPcard .below-image {
+    padding: 5% 0;
+  }
 
   .book-genre {
     padding-right: 0%;
@@ -3142,6 +3207,15 @@ footer ul li {
 
   p.product-price {
     font-size: 3.3vw;
+  }
+  .HPeventimg, .HPeventimg1, .HPeventimg2 {
+    display: none;
+  }
+  .HPeventsgrid {
+    margin-left: 0;
+  }
+  .HPevent {
+    grid-template-columns: 100vw;
   }
 
   /* classes for creating dropdown in JS */
