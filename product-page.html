@@ -72,16 +72,18 @@
             <a href="#">Philosophy <i class="arrow right"></i></a>
             <a href="#">Moving Worlds</a>
         </div>
-        <div class="bag-popup"> 
-            <template class="template-bag"></template>
-            <div id="popup1" class="overlay">
-            <div class="popup">
-                <div class="inner-bag-top">
+
+        <div class="bag-container">
+            <template class="template-bag">
+            <div class="bag-popup"> 
+                <div id="popup1" class="overlay">
+                <div class="popup">
+                    <div class="inner-bag-top">
                     <p class="bag-title">Bag</p>
                     <a class="close" href="#">&times;</a>
-                </div>
-                <div class="content">
-                    <img src="assets/en-stemme.webp" alt="book-in-bag">
+                     </div>
+                    <div class="content">
+                        <img src="assets/en-stemme.webp" alt="book-in-bag">
                     <div class="bag-info-book">
                         <p class="genre-bag">PHILOSOPHY</p>
                         <p class="name-bag">Moving Worlds</p>
@@ -111,8 +113,10 @@
                     </div>
                 </div> 
             </div>
+            </template>
         </div>
-           
+        </div>
+        
         <template id="product-template">
         <section class="product">
             <img class="book-image" src="assets/aerboedighed_fordomme.webp" alt="book">
