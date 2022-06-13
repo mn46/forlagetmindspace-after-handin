@@ -160,6 +160,7 @@
                 </div>
             </div>
             </section>
+
             <h4 class="lr">Latest reviews</h4>
             <section class="latest-reviews">
                 <div class="review-cards">
@@ -189,18 +190,23 @@
                 </div>
             </div>
         </section>
+
         <section class="about-the-book">
             <h5>About the book</h5>
-            <div class="about-the-book-card">
-                <div class="information-about">
-                    <img class="about-book-pic" src="assets/aerboedighed_fordomme.webp" alt="book">
-                    <div class="if">
-                        <p class="genre-about-card">PHILOSOPHY</p>
-                        <p class="name-about-card">Moving worlds</p>
-                        <p class="author-about-card">John Shotter</p>
+            <div id="more-info">
+                <template id="about-book-template">
+                    <div class="about-the-book-card">
+                        <div class="information-about">
+                            <img class="about-book-pic" src="assets/aerboedighed_fordomme.webp" alt="book">
+                            <div class="if">
+                                <p class="genre-about-card">PHILOSOPHY</p>
+                                <p class="name-about-card">Moving worlds</p>
+                                <p class="author-about-card">John Shotter</p>
+                            </div>
+                        </div>
+                        <p class="text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vivamus ut platea nec proin phasellus. A sociis donec eget ultrices dui, adipiscing. Phasellus ut tincidunt amet felis arcu, consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vivamus ut platea nec proin phasellus. A sociis donec eget ultrices dui, adipiscing. Phasellus ut tincidunt amet felis arcu, consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vivamus ut platea nec proin phasellus. A sociis donec eget ultrices dui, adipiscing. Phasellus ut tincidunt amet felis arcu, consequat...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vivamus ut platea nec proin phasellus. A sociis donec eget ultrices dui, adipiscing. Phasellus ut tincidunt amet felis arcu, consequat.</p>
                     </div>
-                </div>
-                <p class="text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vivamus ut platea nec proin phasellus. A sociis donec eget ultrices dui, adipiscing. Phasellus ut tincidunt amet felis arcu, consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vivamus ut platea nec proin phasellus. A sociis donec eget ultrices dui, adipiscing. Phasellus ut tincidunt amet felis arcu, consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vivamus ut platea nec proin phasellus. A sociis donec eget ultrices dui, adipiscing. Phasellus ut tincidunt amet felis arcu, consequat...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vivamus ut platea nec proin phasellus. A sociis donec eget ultrices dui, adipiscing. Phasellus ut tincidunt amet felis arcu, consequat.</p>
+                </template>
             </div>
         </section>
 
@@ -245,12 +251,10 @@
             <div class="HPscroll">
                 <template id="book-card-template">
                     <div class="HPcard">
-                        <a class="product-link" href="" aria-label="go to product page"><img class="book-image"
-                                src="" alt=""></a>
+                        <a class="product-link" href="" aria-label="go to product page"><img class="book-image" src="" alt=""></a>
                         <div class="below-image">
                             <span class="book-genre"></span>
-                            <img class="favourites" src="assets/icons/add-favourites.svg"
-                                alt="add to favourites icon">
+                            <img class="favourites" src="assets/icons/add-favourites.svg" alt="add to favourites icon">
                             <img class="buy" src="assets/icons/bag.svg" alt="bag icon">
                         </div>
                         <a class="product-link" href="" aria-label="go to product page">

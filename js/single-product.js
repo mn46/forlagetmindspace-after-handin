@@ -14,6 +14,7 @@ fetch(urlBooks)
     
     .then(function(data) {
         showProduct(data);
+        showInfo(data);
         displayAuthor(data);
     })
 
@@ -46,44 +47,29 @@ function showProduct(product) {
 
     document.querySelector("main").appendChild(productClone);
 
-    // about the book
-
-    // productClone.querySelector(".about-book-pic").src = product.book_picture;
-    // productClone.querySelector(".genre-about-card").textContent = product.genre;
-    // productClone.querySelector(".name-about-card").textContent = product.title.rendered;
-    // productClone.querySelector(".author-about-card").textContent = product.book_author + " " + product.book_author2 + " " + product.book_author3;
-    // productClone.querySelector(".price").textContent = product.price + ",- DKK";
-    // productClone.querySelector("p.text-about").textContent = product.book_info;
-
 }
+
+// about the book
+
+function showInfo(more_books) {
+
+    const infoTemplate = document.querySelector("#about-book-template").content;
+    infoClone = infoTemplate.cloneNode(true);
+
+    infoClone.querySelector(".about-book-pic").src = more_books.book_picture;
+    infoClone.querySelector(".genre-about-card").textContent = more_books.genre;
+    infoClone.querySelector(".name-about-card").textContent = more_books.title.rendered;
+    infoClone.querySelector(".author-about-card").textContent = more_books.book_author + " " + more_books.book_author2 + " " + more_books.book_author3;
+    infoClone.querySelector("p.text-about").textContent = more_books.book_info;
+
+    document.querySelector("#more-info").appendChild(infoClone);
+}
+
+// about the author
 
 function displayAuthor(product) {
 
-    // let authors_array = [
-    //     [product.book_author, product.author_picture, product.author_info], 
-    //     [product.book_author2, product.author_picture2, product.author_info2], 
-    //     [product.book_author3, product.author_picture2, product.author_info3]
-    // ];
-
-    // authors_array.forEach(element => {
-    //     if (element[0] !== "") {
-
-    //         const authorTemplate = document.querySelector("#author-template").content;
-    //         authorClone = authorTemplate.cloneNode(true);
-
-    //         authorClone.querySelector(".image-for-author").src = element[1];
-    //         authorClone.querySelector(".meettheauthor-name").textContent = element[0];
-    //         authorClone.querySelector(".author-genre").textContent = product.genre;
-    //         authorClone.querySelector(".abouttheauthor-text p").textContent = element[2];
-
-    //         document.querySelector("#authors-list").appendChild(authorClone);
-
-    //     }
-    // });
-
     if (product.book_author !== "") {
-
-        console.log(product);
 
         const authorTemplate = document.querySelector("#author-template").content;
         authorClone = authorTemplate.cloneNode(true);
@@ -92,6 +78,34 @@ function displayAuthor(product) {
         authorClone.querySelector(".meettheauthor-name").textContent = product.book_author;
         authorClone.querySelector(".author-genre").textContent = product.genre;
         authorClone.querySelector(".abouttheauthor-text p").textContent = product.author_info;
+
+        document.querySelector("#authors-list").appendChild(authorClone);
+
+    }
+
+    if (product.book_author2 !== "") {
+
+        const authorTemplate = document.querySelector("#author-template").content;
+        authorClone = authorTemplate.cloneNode(true);
+
+        authorClone.querySelector(".image-for-author").src = product.author_picture2;
+        authorClone.querySelector(".meettheauthor-name").textContent = product.book_author2;
+        authorClone.querySelector(".author-genre").textContent = product.genre;
+        authorClone.querySelector(".abouttheauthor-text p").textContent = product.author_info2;
+
+        document.querySelector("#authors-list").appendChild(authorClone);
+
+    }
+
+    if (product.book_author3 !== "") {
+
+        const authorTemplate = document.querySelector("#author-template").content;
+        authorClone = authorTemplate.cloneNode(true);
+
+        authorClone.querySelector(".image-for-author").src = product.author_picture3;
+        authorClone.querySelector(".meettheauthor-name").textContent = product.book_author3;
+        authorClone.querySelector(".author-genre").textContent = product.genre;
+        authorClone.querySelector(".abouttheauthor-text p").textContent = product.author_info3;
 
         document.querySelector("#authors-list").appendChild(authorClone);
 
