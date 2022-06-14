@@ -78,11 +78,16 @@ function showAuthor(author) {
 
   // adding data
 
-  authorClone.querySelector("img.HPauthorImg").src = author.author_photo;
+  if (author.author_photo !== "") {
+    authorClone.querySelector("img.HPauthorImg").src = author.author_photo;
+  } else {
+    authorClone.querySelector("img.HPauthorImg").src = "http://mnowak.dk/forlagetmindspace-after-handin/assets/authors/Avatar-1.svg";
+  }
 
   authorClone.querySelector(".HP-author-name").textContent = author.book_author;
 
   authorClone.querySelector(".HP-author-books").textContent = author.book1;
+  
 
   // authorClone.querySelector(".author").textContent = books.book_author;
 
