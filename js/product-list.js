@@ -1,20 +1,35 @@
 // fetching the data - books
 
-let books_url = 'http://mnowak.dk/wp-mindspace/wp-json/wp/v2/book?per_page=100'
+const urlCatParams = new URLSearchParams(window.location.search);
+const cat = urlCatParams.get("category");
 
-fetch(books_url)
-    .then(function(res) {
-        return res.json();
-    })
-    
-    .then(function(data) {
-        dataReceived(data);
-})
+const books_url = 'http://mnowak.dk/wp-mindspace/wp-json/wp/v2/book?per_page=100';
 
 
-function dataReceived(data) {
-    data.forEach(showBook);
+function catProducts() {
+
+    let apiLink = "";
+
+    console.log(cat)
+
+    if (cat === null) {
+        apiLink = books_url;
+    } else {
+        apiLink = books_url + "&categories=" + cat;
+    }
+
+    fetch(apiLink)
+        .then(function(res) {
+            return res.json();
+        })
+        
+        .then(function(data) {
+            data.forEach(showBook);
+        })
+
 }
+
+catProducts()
 
 function showBook(books) {
 
@@ -119,3 +134,22 @@ function showFilters() {
 document.querySelector(".filters-dropdown").addEventListener("click", showFilters);
 
 
+// displaying products from certain category
+
+// const urlCatParams = new URLSearchParams(window.location.search);
+// const cat = urlCatParams.get("category");
+
+// function catProducts() {
+
+//     if (cat !== "") {
+//         fetch('http://mnowak.dk/wp-mindspace/wp-json/wp/v2/book' + cat)
+//         .then (function(res) {
+//             return res.json();
+//         })
+        
+//         .then(function(data) {
+//             forEach.showBook(data);
+//         })
+//     }
+
+// }
