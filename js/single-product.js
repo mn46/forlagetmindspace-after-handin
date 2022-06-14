@@ -78,7 +78,11 @@ function displayAuthor(product) {
         const authorTemplate = document.querySelector("#author-template").content;
         authorClone = authorTemplate.cloneNode(true);
 
-        authorClone.querySelector(".image-for-author").src = product.author_picture;
+        if (product.author_picture !== "") {
+            authorClone.querySelector(".image-for-author").src = product.author_picture;
+        } else {
+            authorClone.querySelector(".image-for-author").src = "http://mnowak.dk/forlagetmindspace-after-handin/assets/authors/Avatar-1.svg";
+        }
         authorClone.querySelector(".meettheauthor-name").textContent = product.book_author;
         authorClone.querySelector(".author-genre").textContent = product.genre;
         authorClone.querySelector(".abouttheauthor-text p").textContent = product.author_info;
@@ -92,7 +96,11 @@ function displayAuthor(product) {
         const authorTemplate = document.querySelector("#author-template").content;
         authorClone = authorTemplate.cloneNode(true);
 
-        authorClone.querySelector(".image-for-author").src = product.author_picture2;
+        if (product.author_picture !== "") {
+            authorClone.querySelector(".image-for-author").src = product.author_picture2;
+        } else {
+            authorClone.querySelector(".image-for-author").src = "http://mnowak.dk/forlagetmindspace-after-handin/assets/authors/Avatar-1.svg";
+        }
         authorClone.querySelector(".meettheauthor-name").textContent = product.book_author2;
         authorClone.querySelector(".author-genre").textContent = product.genre;
         authorClone.querySelector(".abouttheauthor-text p").textContent = product.author_info2;
@@ -106,7 +114,11 @@ function displayAuthor(product) {
         const authorTemplate = document.querySelector("#author-template").content;
         authorClone = authorTemplate.cloneNode(true);
 
-        authorClone.querySelector(".image-for-author").src = product.author_picture3;
+        if (product.author_picture !== "") {
+            authorClone.querySelector(".image-for-author").src = product.author_picture3;
+        } else {
+            authorClone.querySelector(".image-for-author").src = "http://mnowak.dk/forlagetmindspace-after-handin/assets/authors/Avatar-1.svg";
+        }
         authorClone.querySelector(".meettheauthor-name").textContent = product.book_author3;
         authorClone.querySelector(".author-genre").textContent = product.genre;
         authorClone.querySelector(".abouttheauthor-text p").textContent = product.author_info3;

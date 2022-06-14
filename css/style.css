@@ -1189,7 +1189,7 @@ p.product-price {
   grid-template-columns: 0.8fr 0.5fr 0.8fr;
   font-family: var(--body-font);
   column-gap: 2rem;
-  margin: 5rem;
+  margin: 8rem 5rem 5rem 5rem;
 }
 
 .genre {
@@ -1512,17 +1512,29 @@ h5 {
   grid-row: 1/2;
 }
 
-.person {
-  grid-column: 1/2;
-  font-size: var(--heading2-size);
+.review-author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.person1, .person2 {
+  /* grid-column: 1/2; */
+  margin-top: 1rem;
+  font-size: var(--heading3-size);
   font-family: var(--headings-font);
   font-weight: 400;
   text-align: center;
 }
 
-.reviewtext {
-  grid-column: 2/3;
-  grid-row: 1/2;
+.reviewtext1, .reviewtext2 {
+  /* grid-column: 2/3;
+  grid-row: 1/2; */
   margin-top: 2rem;
   font-size: var(--body-size);
   font-family: var(--body-font);
