@@ -264,6 +264,14 @@ a:active {
 .HPbanner .readmorebutton {
   margin-top: 2%;
 }
+
+.HPbanner a.readmorebutton {
+  font-family: 'Merriweather Sans';
+  color: var(--secondary-color);
+}
+.HPbanner a.readmorebutton:hover {
+  color: white;
+}
 .parenthesis {
   position: absolute;
   height: 5rem;
