@@ -233,7 +233,7 @@ a:active {
   margin-top: 0.3rem;
 }
 .HPbanner {
-  background-image: url("../assets/drommemaskine.jpg");
+  /* background-image: url("../assets/drommemaskine.jpg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -244,6 +244,22 @@ a:active {
   align-items: flex-start;
   justify-content: center;
   position: relative;
+  height: 400px;
+}
+.banner1 {
+  background-image: url("../assets/drommemaskine.jpg");
+}
+.banner2 {
+  background-image: url("../assets/holdmig.jpg");
+}
+.HPbanner .ratings .starblue {
+  width: 2rem;
+}
+.banner2 h1 {
+  margin-top: 2rem;
+}
+.banner3 {
+  background-image: url("../assets/idenne.jpg");
 }
 .HPbanner .readmorebutton {
   margin-top: 2%;
@@ -260,6 +276,12 @@ a:active {
   top: 4%;
   left: 4%;
 }
+.par2 {
+  background: url(../assets/parenthesis-red.svg);
+  background-repeat: no-repeat;
+  opacity: 30%;
+  top: 6%;
+}
 .threedots {
   position: absolute;
   height: 3rem;
@@ -272,11 +294,22 @@ a:active {
   bottom: 5px;
   left: 45%;
 }
+.dot2 {
+  background: url(../assets/icons/threedots-2.svg);
+  background-repeat: no-repeat;
+  background-size: 3rem 3rem;
+}
+.dot3 {
+  background: url(../assets/icons/threedots-3.svg);
+  background-repeat: no-repeat;
+  background-size: 3rem 3rem;
+}
 .HPbanner h1 {
   font-family: var(--headings-font);
   font-size: 3vw;
   font-weight: 300;
   line-height: 140%;
+  margin-top: 5%;
 }
 #home-main p {
   font-family: var(--body-font);
@@ -1716,6 +1749,7 @@ footer ul li {
     font-size: 3vh;
     line-height: 4vh;
     margin-bottom: 2%;
+    margin-top: 4vh;
   }
   .parenthesis {
     height: 6rem;
@@ -1936,8 +1970,16 @@ footer ul li {
     font-size: 3.5vh;
     line-height: 6vh;
   }
-  .HPbanner {
+  .banner1 {
     background-image: url("../assets/drommemaskine-s.jpg");
+    background-size: cover;
+  }
+  .banner2 {
+    background-image: url("../assets/holdmig-s.jpg");
+    background-size: cover;
+  }
+  .banner3 {
+    background-image: url("../assets/idenne-s.jpg");
     background-size: cover;
   }
   .parenthesis {
@@ -2765,7 +2807,9 @@ footer ul li {
     row-gap: 5%;
     margin: 5%;
   }
-
+  .HPbanner .ratings .starblue {
+    width: 1rem;
+  }
   .ratings img {
     margin-top: 0;
     display: flex;
@@ -3269,3 +3313,30 @@ footer ul li {
     background-color: #fff;
   }
 }
+
+/* classes for slider banner */
+.mySlides {
+  display: none;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* 
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+} */
