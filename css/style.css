@@ -1839,89 +1839,89 @@ footer ul li {
 @media only screen and (min-width: 2560px) {
   .HPh3 {
     font-size: 3rem;
-  }
-  .HPevent {
-    grid-template-columns: 30vw 20vw;
-  }
-  .HPbanner {
+    }
+    .HPevent {
+        grid-template-columns: 30vw 20vw;
+    }
+    .HPbanner {
     height: 25vh;
-  }
-  .HPbanner h1 {
-    font-size: 3vh;
-    line-height: 4vh;
-  }
-  .HPbanner h1::before {
+    }
+    .HPbanner h1 {
+        font-size: 3vh;
+        line-height: 4vh;
+    }
+    .HPbanner h1::before {
     margin-top: -5%;
     height: 15%;
-  }
-  .HPbanner .readmorebutton {
-    margin-top: -20px;
-  }
+    }
+    .HPbanner .readmorebutton {
+        margin-top: -20px;
+    }
 }
 
 @media only screen and (min-width: 1440px) {
   .HPh3 {
     font-size: 2.3rem;
-  }
-  .NLgrid {
+    }
+    .HPevent {
+        grid-template-columns: 30vw 25vw;
+    }
+    .NLgrid {
     gap: 40px;
-  }
-  .newsletter img {
-    width: 70%;
-  }
-  .newsletter {
-    justify-items: center;
-  }
-  .HPtopbook .ratings {
-    width: 20%;
-  }
-  #home-main p.b {
-    font-size: 1rem;
-  }
-  p {
-    font-size: 1rem;
-  }
+    }
+    .newsletter img {
+        width: 70%;
+    }
+    .newsletter {
+        justify-items: center;
+    }
+    .HPtopbook .ratings {
+        width: 20%;
+    }
+    #home-main p.b {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 1rem;
+    }
 }
 
 @media only screen and (max-width: 1361px) {
-  .product {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    column-gap: 2%;
-    row-gap: 6%;
+
+    .product {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      column-gap: 2%;
+      row-gap: 6%;
   }
 
   .ratings {
-    margin-top: 1rem;
-    display: flex;
-    margin-right: 1px;
-    font-weight: 200;
-    font-size: var(--body-size);
-    margin-bottom: 1rem;
+      margin-top: 1rem;
+      display: flex;
+      margin-right: 1px;
+      font-weight: 200;
+      font-size: var(--body-size);
+      margin-bottom: 1rem;
   }
 
+
   .about {
-    grid-column: 1/4;
-    width: 100%;
-    row-gap: 20px;
-    flex-direction: column-reverse;
+      grid-column: 1/4;
+      width: 100%;
+      row-gap: 20px;
+      flex-direction: column-reverse;
   }
 
   .book-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
 
-  .about,
-  .latest-reviews,
-  .about-the-book-card,
-  .meettheauthor {
-    margin-bottom: 10rem;
+  .about, .latest-reviews, .about-the-book-card, .meettheauthor {
+      margin-bottom: 10rem;
   }
-  .HPtopbook {
-    display: block;
-  }
+
 }
 
 @media only screen and (max-width: 1024px) {
@@ -2129,8 +2129,6 @@ footer ul li {
       font-size: var(--body-mobile);
     }
 
-    
-  }
 
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
@@ -2447,6 +2445,8 @@ footer ul li {
         font-size: 2rem;
         margin-left: 2%;
     } */
+
+  }
 
 
 @media only screen and (max-width: 425px) {
