@@ -16,6 +16,8 @@ fetch(urlBooks)
         showProduct(data);
         // showReview(data);
         // showAuthor(data);
+        bookinBag(data);
+
     })
 
 
