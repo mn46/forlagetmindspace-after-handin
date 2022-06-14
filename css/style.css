@@ -242,22 +242,41 @@ a:active {
   padding: 3%;
   padding-left: 10%;
   align-items: flex-start;
+  justify-content: center;
+  position: relative;
 }
 .HPbanner .readmorebutton {
-  margin-top: 5%;
+  margin-top: 2%;
 }
-.HPbanner h1::before {
-  content: url("../assets/parenthesis.svg");
-  display: grid;
-  margin-left: -5vw;
+.parenthesis {
+  position: absolute;
+  height: 5rem;
+  width: 5rem;
+  background: url(../assets/parenthesis.svg);
+  background-size: 5rem 5rem;
+  background-repeat: no-repeat;
   opacity: 50%;
   mix-blend-mode: multiply;
+  top: 4%;
+  left: 4%;
+}
+.threedots {
+  position: absolute;
+  height: 3rem;
+  width: 3rem;
+  background: url(../assets/icons/threedots.svg);
+  background-size: 3rem 3rem;
+  background-repeat: no-repeat;
+  opacity: 80%;
+  mix-blend-mode: multiply;
+  bottom: 5px;
+  left: 45%;
 }
 .HPbanner h1 {
   font-family: var(--headings-font);
-  font-size: 6vh;
+  font-size: 3vw;
   font-weight: 300;
-  line-height: 8vh;
+  line-height: 140%;
 }
 #home-main p {
   font-family: var(--body-font);
@@ -518,6 +537,7 @@ a:active {
   text-transform: uppercase;
   padding: 15px 30px;
   justify-self: end;
+  cursor: pointer;
 }
 .readmorebutton:hover {
   background-color: var(--secondary-color);
@@ -1677,7 +1697,10 @@ footer ul li {
 .HPcard .buy {
   width: auto;
 }
-
+#home-main .HPbanner p {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
 /* media queries  */
 @media only screen and (min-width: 2560px) {
   .HPh3 {
@@ -1692,14 +1715,22 @@ footer ul li {
   .HPbanner h1 {
     font-size: 3vh;
     line-height: 4vh;
+    margin-bottom: 2%;
   }
-  .HPbanner h1::before {
-    margin-top: -5%;
-    height: 15%;
+  .parenthesis {
+    height: 6rem;
+    width: 6rem;
+    background-size: 6rem 6rem;
+    top: 10%;
+    left: 5%;
   }
   .HPbanner .readmorebutton {
     margin-top: -20px;
   }
+  #home-main .HPbanner p {
+    margin-top: 0;
+    margin-bottom: 3%;
+}
 }
 
 @media only screen and (min-width: 1440px) {
@@ -1813,10 +1844,6 @@ footer ul li {
 }
 
 @media only screen and (max-width: 768px) {
-  .HPbanner h1 {
-    font-size: 4.5vh;
-    line-height: 7vh;
-  }
   .HPh3 {
     font-size: 1.5rem;
     padding: 60px 20px;
@@ -1839,10 +1866,9 @@ footer ul li {
   .HPbanner {
     height: 50vh;
   }
-  .HPbanner h1 {
-    font-size: 4vh;
-    line-height: 7vh;
-  }
+  #home-main .HPbanner p {
+    margin-bottom: 0;
+}
 }
 
 @media only screen and (max-width: 768px) {
@@ -1906,9 +1932,6 @@ footer ul li {
   #home-main h2 {
     margin-top: 0;
   }
-  .HPbanner {
-    height: 40vh;
-  }
   .HPbanner h1 {
     font-size: 3.5vh;
     line-height: 6vh;
@@ -1916,6 +1939,9 @@ footer ul li {
   .HPbanner {
     background-image: url("../assets/drommemaskine-s.jpg");
     background-size: cover;
+  }
+  .parenthesis {
+    left: 5%;
   }
   .HPcard .buy {
     padding: 2%;
@@ -2373,10 +2399,22 @@ footer ul li {
   }
   .HPbanner {
     height: 30vh;
+    padding-right: 35%;
+    justify-content: space-evenly;
   }
   .HPbanner h1 {
     font-size: 2.3vh;
     line-height: 4vh;
+  }
+  .threedots {
+    height: 2rem;
+    width: 2rem;
+    background-size: 2rem 2rem;
+    bottom: -5px;
+  }
+  #home-main .HPbanner p {
+    font-size: 0.6rem;
+    line-height: 150%;
   }
 
   .dropdown-books:active .dropdown-content {
@@ -3010,9 +3048,6 @@ footer ul li {
   .HPbanner h1 {
     font-size: 2vh;
     line-height: 3vh;
-  }
-  .HPbanner .readmorebutton {
-    margin-top: 10%;
   }
 
   /* product list */
