@@ -3536,3 +3536,12 @@ footer ul li {
     width: 100%;
   }
 } */
+
+#home-main {
+  margin-top: 96px;
+}
+@media only screen and (max-width: 768px) {
+  #home-main {
+    margin-top: 141px;
+  }
+}
