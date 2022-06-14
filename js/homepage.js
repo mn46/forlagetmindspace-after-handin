@@ -111,3 +111,38 @@ function showSlides() {
   slides[slideIndex - 1].style.display = "block";
   setTimeout(showSlides, 5000);
 }
+
+
+let topbooks_url = "http://mnowak.dk/wp-mindspace/wp-json/wp/v2/book?per_page=1";
+
+fetch(topbooks_url)
+  .then(function (res) {
+    return res.json();
+  })
+
+  .then(function (data) {
+    TopbookdataReceived(data);
+    console.log(data);
+  });
+
+function TopbookdataReceived(data) {
+  data.forEach(showTopBook);
+}
+
+function showTopBook(topbook) {
+  const topbookTemplate = document.querySelector(
+    ".HPbookinfo"
+  ).content;
+
+  topbookClone = topbookTemplate.cloneNode(true);
+
+  // adding data
+
+  bookClone.querySelector("img.topbook-image").src = topbook.book_picture;
+
+  bookClone.querySelector(".topbook-title").textContent = topbook.title.rendered;
+
+  bookClone.querySelector(".topbook-author").textContent = topbook.book_author;
+
+  document.querySelector(".Topbookdiv").appendChild(topbookClone);
+}
