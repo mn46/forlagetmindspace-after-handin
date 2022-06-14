@@ -15,6 +15,10 @@ fetch(urlBooks)
     .then(function(data) {
         showProduct(data);
         displayAuthor(data);
+        // showReview(data);
+        // showAuthor(data);
+        bookinBag(data);
+
     })
 
 
@@ -103,3 +107,19 @@ function displayAuthor(product) {
 
 
 
+
+function bookinBag(book) {
+
+    const bagTemplate = document.querySelector(".template-bag").content;
+    bagClone = bagTemplate.cloneNode(true);
+
+    bagClone.querySelector(".content img").src = book.book_picture;
+    bagClone.querySelector(".genre-bag").src = book.genre;
+    bagClone.querySelector(".name-bag").src = book.title.rendered;
+    bagClone.querySelector(".author-bag").src = book.product.book_author;
+    bagClone.querySelector(".price-bag").src = book.product.price + ",- DKK";
+
+
+    document.querySelector(".bag-container").appendChild(bagClone);
+
+}
