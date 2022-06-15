@@ -5,20 +5,13 @@ const cat = urlCatParams.get("category");
 
 const books_url = 'http://mnowak.dk/wp-mindspace/wp-json/wp/v2/book?per_page=100';
 
+const cat_url = books_url + "&categories=" + cat;
 
 function catProducts() {
 
-    let apiLink = "";
-
-    console.log(cat)
-
     if (cat === null) {
-        apiLink = books_url;
-    } else {
-        apiLink = books_url + "&categories=" + cat;
-    }
 
-    fetch(apiLink)
+        fetch(books_url)
         .then(function(res) {
             return res.json();
         })
@@ -27,11 +20,32 @@ function catProducts() {
             data.forEach(showBook);
         })
 
+    } else {
+
+        fetch(cat_url)
+        .then(function(res) {
+            return res.json();
+        })
+        
+        .then(function(data) {
+            data.forEach(showBook);
+        })
+
+    }
+
+    
+
 }
 
 catProducts()
 
 function showBook(books) {
+
+    if (cat === null) {
+        document.querySelector("#product-list h1").textContent = "All books";
+    } else {
+        document.querySelector("#product-list h1").textContent = books.genre;
+    }
 
     const bookTemplate = document.querySelector("#book-card-template").content;
 
