@@ -736,6 +736,11 @@ nav {
   padding: 15px 30px;
   justify-self: end;
   cursor: pointer;
+  text-align: center;
+}
+.HPbanner .readmorebutton {
+  position: absolute;
+  bottom: 15%;
 }
 .readmorebutton:hover {
   background-color: var(--secondary-color);
